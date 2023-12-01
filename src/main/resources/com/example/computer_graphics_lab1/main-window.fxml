@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.canvas.Canvas?>
+<HBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.computer_graphics_lab1.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <VBox maxWidth="450">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        </padding>
+        <HBox>
+            <VBox>
+                <Label>R</Label>
+                <TextField text="0" fx:id="rValue" onAction="#RewriteColorRGB"/>
+                <Slider max="255" fx:id="rSliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>G</Label>
+                <TextField text="0" fx:id="gValue" onAction="#RewriteColorRGB"/>
+                <Slider max="255" fx:id="gSliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>B</Label>
+                <TextField text="0" fx:id="bValue" onAction="#RewriteColorRGB"/>
+                <Slider max="255" fx:id="bSliderValue"/>
+            </VBox>
+        </HBox>
+        <HBox>
+            <VBox>
+                <Label>C</Label>
+                <TextField text="0" fx:id="cValue" onAction="#RewriteColorCMYK"/>
+                <Slider max="100" fx:id="cSliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>M</Label>
+                <TextField text="0" fx:id="mValue" onAction="#RewriteColorCMYK"/>
+                <Slider max="100" fx:id="mSliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>Y</Label>
+                <TextField text="0" fx:id="yValue" onAction="#RewriteColorCMYK"/>
+                <Slider max="100" fx:id="ySliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>K</Label>
+                <TextField text="0" fx:id="kValue" onAction="#RewriteColorCMYK"/>
+                <Slider max="100" value="100" fx:id="kSliderValue"/>
+            </VBox>
+        </HBox>
+        <HBox>
+            <VBox>
+                <Label>H</Label>
+                <TextField text="0" fx:id="hValue" onAction="#RewriteColorHSL"/>
+                <Slider max="360" fx:id="hSliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>S</Label>
+                <TextField text="0" fx:id="sValue" onAction="#RewriteColorHSL"/>
+                <Slider max="100" fx:id="sSliderValue"/>
+            </VBox>
+            <VBox>
+                <Label>L</Label>
+                <TextField text="0" fx:id="lValue" onAction="#RewriteColorHSL"/>
+                <Slider max="100" fx:id="lSliderValue"/>
+            </VBox>
+        </HBox>
+    </VBox>
+    <VBox>
+        <ColorPicker fx:id="colorPicker" onAction="#OnColorPickerChange"/>
+        <Canvas height="200" width="100" fx:id="canvas"/>
+    </VBox>
+</HBox>
