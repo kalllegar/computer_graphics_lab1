@@ -1,4 +1,4 @@
-# Color Peaker
+# Lab1
 ## CMYK ↔ LAB ↔ HLS
 
  Изучить цветовые модели: RGB, CMYK, HLS переход от одной модели к другой.<br/>
