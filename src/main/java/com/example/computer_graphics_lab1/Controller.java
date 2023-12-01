@@ -121,11 +121,13 @@ public class Controller implements Initializable {
             public void changed(ObservableValue<? extends Number> changed, Number oldValue, Number newValue) {
                 if (cmykFlag) {
                     cValue.setText(String.valueOf(newValue.intValue()));
+                    hslFlag = false;
                     rgbFlag = false;
                     CMYKtoRGB();
                     RGBtoHSL();
                     RewriteColor();
                     rgbFlag = true;
+                    hslFlag = true;
                 }
             }
         });
